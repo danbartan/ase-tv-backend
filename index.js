@@ -4,6 +4,7 @@ import Database from "better-sqlite3";
 const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.static("public"));
 
 const db = new Database("data.db");
 db.exec(`
@@ -25,8 +26,6 @@ const insert = db.prepare(
 
 app.post("/Submit", (req, res) => {
     let {prenume, nume, email, telefon, facultate, anDeStudiu, optional} = req.body || {}
-
-    
 
     if (!prenume || !nume || !email || !telefon || !facultate || !anDeStudiu) {
         return res.status(400).json({error: "Required information is missing"});
@@ -53,7 +52,6 @@ app.post("/Submit", (req, res) => {
         console.error(err)
         res.status(500).json({error: "Eroare la salvarea datelor"})
     }
-
 });
 
 app.listen(3000, () => {
