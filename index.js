@@ -24,7 +24,7 @@ const insert = db.prepare(
 )
 
 app.post("/Submit", (req, res) => {
-    const {prenume, nume, email, telefon, facultate, anDeStudiu, optional} = req.body;
+    let {prenume, nume, email, telefon, facultate, anDeStudiu, optional} = req.body || {}
 
     
 
@@ -34,16 +34,28 @@ app.post("/Submit", (req, res) => {
     
     anDeStudiu = Number(anDeStudiu);
 
-    if (anDeStudiu.isInteger() || anDeStudiu < 1 || anDeStudiu > 3)
+    if (!Number.isInteger(anDeStudiu) || anDeStudiu < 1 || anDeStudiu > 3)
     {
         return res.status(400).json({error: "Anul de studiu trebuie sa fie intre 1 si 3 si sa fie un numar intreg"});
     }
 
-    const result = insert.run({nume, prenume, telefon, email, facultate, anDeStudiu, optional});
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({error: "Email invalid"})
+    }
+    if (!/^0\d{9}$/.test(telefon)) {
+        return res.status(400).json({error: "Numarul de telefon trebuie sa aiba 10 cifre si sa inceapa cu 0"})
+    }
 
-    res.status(201).json({id: result.lastInsertRowid});
+    try {
+        const result = insert.run({nume, prenume, telefon, email, facultate, anDeStudiu, optional: optional || null});
+        res.status(201).json({id: result.lastInsertRowid});
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({error: "Eroare la salvarea datelor"})
+    }
 
-    app.listen(3000, () => {
-        console.log("Listening on https://localhost:3000");
-    })
 });
+
+app.listen(3000, () => {
+        console.log("Listening on http://localhost:3000");
+    })
