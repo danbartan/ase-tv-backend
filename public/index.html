@@ -35,7 +35,31 @@
     <input type="text" name="optional" id="optional">
 
     <input type="submit" value="Send">
+    <p id="confirmareFormular"></p>
   </form>
+
+  <script>
+    const formular = document.querySelector("form");
+    const mesaj = document.getElementById("confirmareFormular");
+
+    formular.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const raspuns = await fetch("/Submit", {
+        method: "POST",
+        body: new URLSearchParams(new FormData(formular))
+      });
+
+      const date = await raspuns.json();
+
+      if (raspuns.ok) {
+        mesaj.textContent = "Inscrierea a fost trimisa!";
+        formular.reset();
+      } else {
+        mesaj.textContent = date.error;
+      }
+    });
+  </script>
 </body>
 
 </html>
