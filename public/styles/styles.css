@@ -1,0 +1,387 @@
+/* GENERAL STUFF */
+@font-face {
+    font-family: "Super Waffles";
+    src: url("fonts/super-waffles.ttf") format("truetype");
+    font-display: swap;
+    
+  }
+  @font-face {
+    font-family: "Melt Swashes";
+    src: url("fonts/melt-swashes.ttf") format("truetype");
+    font-display: swap;
+  }
+  
+.container{
+    display:flex;
+}
+.sectiuneNormala{
+    height:85vh;
+    width:100vw;
+    padding:30px;
+}
+.sectiuneJumate{
+    height:40vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    padding:30px;
+}
+.divNormalVer{
+    background-color:#00e6779d ;
+    border-radius: 15px;
+    color:black;
+}
+.divNormalWhi{
+    background-color: #F4F6F9;
+    border-radius: 15px;
+    padding:10px;
+    color:black;
+}
+html {
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color:brown;
+}
+.center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:15%;
+}
+.containerGrid{
+    display:grid;
+}
+img{
+    height: 150px;
+}
+body{
+    background-color: #00A3E0;
+    margin:0;
+    padding:0;
+    font-family: "Melt Swashes", cursive;
+}
+h1{
+    text-align: center;
+    font-family: "Super Waffles", cursive;
+}
+h2{
+    text-align: center;
+    font-family: "Super Waffles", cursive;
+}
+/* ----------------------------------- */
+
+/* NAVBAR */
+
+#NavBar{
+    background-color: #0A192F;
+    position:fixed;
+    width: 100vw;
+    height:10vh;
+    grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+    align-items: center;
+    text-align: center;
+    padding:5px
+}
+#NavBar{
+    color:antiquewhite;
+}
+#moto{
+    color: yellow;
+}
+#Logo{
+    height:9vh;
+    border-radius: 50%;
+}
+/* ----------------------------- */
+
+/* DECRIERE PROIECT */
+#AseTitle{
+    padding-top:15vh;
+}
+#DescriereProiect{
+    padding-top:12.5vh;
+    width:100vw;
+    background-color: #FFB300 ;
+}
+#DivDescriereProiect{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10vw;
+    row-gap: 5vh;
+    width:100%;
+    margin:0;
+}
+#DivIframe{
+    grid-row: span 2;
+    width:100%;
+    height:50vh;
+}
+.DivLangaIframe{
+    height:22.5vh;
+}
+iframe{
+    height:100%;
+    width:100%;
+    background-color: aqua;
+    border-radius: 15px;;
+}
+/* -------------------------- */
+/* DescriereEchipa */
+#DivEchipa{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10vw;
+    row-gap: 5vh;
+    height:50vh;
+}
+#DivImagineEchipa{
+    width:100%;
+    grid-row: span 2;
+}
+#PozaEchipa{
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+}
+
+
+/* --------------------- */
+
+/* EVENIMENTE */
+
+#DivEvenimente{
+    grid-template-columns:  1fr 1.5fr 1fr;
+    grid-template-rows: 1fr ;
+    column-gap:10vh;
+}
+#sectiuneEvenimente{
+   background-color:  #FFB300;
+}
+.hanging {
+    transform-origin: top center;   
+    animation: swing 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes swing {
+    from { transform: rotate(-8deg); }
+    to   { transform: rotate(8deg); }
+  }
+.rhombus{
+    border-radius: 50%;
+    background-color: white;
+}
+#DivGhicesteFac{
+    flex-direction: column;
+    color:rgb(92, 43, 226);
+    background-color: gold;
+}
+#dataGhicesteFac{
+    color:red;
+}
+#DivEvenimentePrincpal{
+    grid-row:span 2;
+    background-color:#0A192F ;
+    height:65vh;
+}
+.divEye{
+    height:fit-content;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.divSoon{
+    background-color: #132e52;
+    color: white;
+    text-shadow: 2px 4px 1px #F4F6F9 ;
+    height: 30vh;
+}
+.H2Numer{
+    margin-top:8vh;
+    font-size: 160px;
+    text-shadow: 
+    2px 2px 4px red, 
+    5px 5px 8px blue;
+}
+
+.bigDivEvenimente{
+    height:65vh;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #132e52;
+    border-radius: 15px;
+    padding:10px;
+}
+.smallDivEvenimente{
+    height:30vh;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#GhicesteH1{
+    font-weight: 700;
+}
+#DivDescriereGhicesteFac{
+    background-color: gold;
+}
+/* ----------------------------------------- */
+/* sectiunegalerie */
+
+#sectiuneGalerie{
+    background-color: #FFB300;
+    height:85vh;
+    margin-bottom:5vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#DivSectiuneGalerie{
+    height:65vh;
+    display:grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:5vh;
+    width:80vw;
+    background-color: #0A192F;
+    margin-bottom:5vh;
+    border-radius: 15px;
+}
+.imgGal{
+    height:25vh;
+    width:50%;
+    border-radius: 15px;
+}
+.imgGal:hover{
+    transform:scale(1.5);
+}
+.divImgGal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------------- */
+ /* SECTIUNE FORM */
+#sectiuneForm{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#112240 ;
+    flex-direction: column;
+}
+form{
+    height:60vh;
+    width:45vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7fr 1fr;
+}
+hr{
+    margin:0;
+}
+#DivSubmit{
+    grid-column: span 2;
+    display:flex;
+    justify-content: center;
+}
+#SubmitButton{
+    width:15vw;
+    background-color: red;
+    border-style: double;
+    border-width: 4px;
+    border-color: #FFB300;
+}
+.divForm{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+input{
+    border: 0;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 15px;
+    height:5vh;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+select{
+    margin-left: 5px;
+    margin-right: 15px;
+    border-radius: 15px;
+    height: 5vh;
+}
+label{
+    text-align: center;
+}
+.divForm div{
+    background-color: #FFB300 ;
+    border-radius: 15px;
+    padding:3px;
+    width:80%;
+    margin-left: 5px;
+}
+
+/* --------------------------------------------------- */
+/* PARTENERI */
+#LogoPartener{
+    border-radius:50%;
+}
+#DivParteneri{
+    width:65vw;
+    height:25vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sectiuneParteneri{
+    display:flex;
+    justify-content: center;
+}
+/* ------------------- */
+
+/* CONTACT */
+
+.imgContact{
+    height:9vh;
+    border-radius: 50%;
+
+}
+#sectiuneContact{
+    justify-content: space-between;
+    align-items: center;
+    height:10vh;
+}
+/* ----------------------- */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+/* 
+#00A3E0
+#0A192F
+#00E676
+#F4F6F9
+#FFFFFF 
+#FFB300 
+#112240
+#E6F1FF
+*/

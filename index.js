@@ -16,18 +16,19 @@ db.exec(`
     telefon TEXT NOT NULL,
     facultate TEXT NOT NULL,
     anDeStudiu INTEGER CHECK (anDeStudiu BETWEEN 1 AND 3) NOT NULL,
-    optional TEXT
+    optional TEXT,
+    emisiune TEXT
     )
 `);
 
 const insert = db.prepare(
-    "INSERT INTO submissions (nume, prenume, telefon, email, facultate, anDeStudiu, optional) VALUES (@nume, @prenume, @telefon, @email, @facultate, @anDeStudiu, @optional)" 
+    "INSERT INTO submissions (nume, prenume, telefon, email, facultate, anDeStudiu, optional, emisiune) VALUES (@nume, @prenume, @telefon, @email, @facultate, @anDeStudiu, @optional, @emisiune)" 
 )
 
 app.post("/Submit", (req, res) => {
-    let {prenume, nume, email, telefon, facultate, anDeStudiu, optional} = req.body || {}
+    let {prenume, nume, email, telefon, facultate, anDeStudiu, optional, emisiune} = req.body || {}
 
-    if (!prenume || !nume || !email || !telefon || !facultate || !anDeStudiu) {
+    if (!prenume || !nume || !email || !telefon || !facultate || !anDeStudiu || !emisiune) {
         return res.status(400).json({error: "Required information is missing"});
     }
     
@@ -46,8 +47,9 @@ app.post("/Submit", (req, res) => {
     }
 
     try {
-        const result = insert.run({nume, prenume, telefon, email, facultate, anDeStudiu, optional: optional || null});
-        res.status(201).json({id: result.lastInsertRowid});
+        const result = insert.run({nume, prenume, telefon, email, facultate, anDeStudiu, optional: optional || null, emisiune: emisiune || null});
+        
+        res.status(201).json({ ok: true });
     } catch (err) {
         console.error(err)
         res.status(500).json({error: "Eroare la salvarea datelor"})

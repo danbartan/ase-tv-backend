@@ -1,45 +1,268 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inscriere ASE.TV</title>
+  <title>ASE.TV</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <form action="/submit" method="post">
-    <label for="nume">Nume</label>
-    <input type="text" name="nume" id="nume" required>
+  <!-- nav-bar -->
+  <section class="containerGrid" id="NavBar">
+    <div><img src="/img/asetvlogo.png" alt="logo" id="Logo" /></div>
+    <div id="moto">Râdem noi, râdeți și voi.</div>
+    <div><a href="#sectiuneContact">Contact</a></div>
+    <div><a href="#sectiuneGalerie">Galerie</a></div>
+    <div><a href="#sectiuneForm">Formular</a></div>
+  </section>
 
-    <label for="prenume">Prenume</label>
-    <input type="text" name="prenume" id="prenume" required>
+  <!-- descrierea proiectului -->
+  <div>
+    <h1 id="AseTitle">ASE.TV</h1>
+    <hr />
+    <section id="DescriereProiect" class="sectiuneNormala">
+      <div class="" id="DivDescriereProiect">
+        <div id="DivIframe">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CZLTSiQZbLE?si=OawIb0OCHRF3HnVO"
+            title="YouTube video player" frameborder="0" allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="divNormalWhi DivLangaIframe">
+          <p>
+            Proiectul constă în realizarea unor emisiuni de divertisment,
+            difuzate pe rețele sociale oficiale (TikTok, Instagram) și
+            platforme online dedicate (YouTube), atingând subiecte cunoscute
+            din cadrul comunității Academiei de Studii Economice din
+            București. Beneficiarii principali ai acestui proiect sunt toți
+            studenții din această comunitate, fie sub formă de participanți
+            activi în emisiuni, fie sub formă de urmăritori.
+          </p>
+        </div>
+        <div class="divNormalWhi DivLangaIframe">
+          <p>
+            Conceptul din spatele “ASE TV” îl reprezintă gama diversificată de
+            conținut de entertainment din mediul online românesc, atât prin
+            idei 100% autohtone, cât și prin idei aduse din străinătate.
+            Ambele surse de inspirație generează un trafic impresionant pe
+            segmentele-țintă ale acestora. Proiectul țintește în schimb
+            furnizarea acestui divertisment în rândul studenților, prin
+            diferite referințe în cadrul programelor, prezentând subiecte
+            relevante din mediul familiar universitar.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <label for="telefon">Numar de telefon</label>
-    <input type="tel" name="telefon" id="telefon" pattern="0[0-9]{9}" title="10 cifre, incepe cu 0" required>
+  <!-- cunoaste echipa -->
+  <hr />
+  <h1>4Teen</h1>
+  <hr />
+  <section class="sectiuneNormala">
+    <h2>Cu ce ne ocupăm?</h2>
+    <div id="DivEchipa">
+      <div class="divNormalWhi">
+        <p>
+          Scopul și obiectivele propuse Scopul principal, așa cum este indicat
+          și de motto-ul proiectului, este divertismentul pentru studenți prin
+          programe apropiate de trenduri, de evenimente de importanță socială,
+          cu accent pe ironie și umor. Alte obiective ale proiectului includ:
+          ▪ Participarea activă în comunitate a studenților de pretutindeni în
+          emisiuni interactive și special construite pentru mediul
+          universitar; ▪ Crearea unui mediu familiar, relaxant pentru studenți
+          prin caracterul ironic și amuzant al emisiunilor ASE TV; ▪
+          Informarea studenților, sub diverse forme, în cadrul emisiunilor
+          despre inițiative studențești; ▪ Reinterpretarea formatelor
+          cunoscute de către studenți, preluate din mediul online, regândite
+          la scara comunității restrânse;
+        </p>
+      </div>
+      <div class="divNormalVer" id="DivImagineEchipa">
+        <img src="img/WhatsApp Image 2026-10-26 at 21.10.07.jpeg" alt="Echipa_14" id="PozaEchipa" />
+      </div>
+      <div class="divNormalWhi">
+        <ol>
+          <li>Reprezentăm studenții</li>
+          <li><a>ASE.TV</a></li>
+          <li>Producem entertainment pentru studenți</li>
+          <li>Învătam și noi ca studenți</li>
+          <li>Creăm sentimentul de comunitate</li>
+          <li>
+            Informăm studenții despre oportunitățile lor din cadrul
+            proiectului nostru
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-    <label for="email">e-mail</label>
-    <input type="email" name="email" id="email" required>
+  <hr />
 
-    <label for="facultate">Facultate</label>
-    <input type="text" name="facultate" id="facultate" required>
+  <!-- galerie -->
+  <section class="" id="sectiuneGalerie">
+    <h2 id="h2Galerie">Galerie</h2>
+    <div id="DivSectiuneGalerie">
+      <div class="divImgGal">
+        <img src="img/galerie/1.jpeg" alt="noi1" class="imgGal" />
+      </div>
+      <div class="divImgGal">
+        <img src="img/galerie/2.jpeg" alt="noi2" class="imgGal" />
+      </div>
+      <div class="divImgGal">
+        <img src="img/galerie/3.jpeg" alt="noi3" class="imgGal" />
+      </div>
+      <div class="divImgGal">
+        <img src="img/galerie/4.jpeg" alt="noi4" class="imgGal" />
+      </div>
+    </div>
+    <hr />
+  </section>
+  <hr />
 
-    <label for="anDeStudiu">An de studiu</label>
-    <select name="anDeStudiu" id="anDeStudiu">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select>
+  <!-- evenimente -->
+  <section class="sectiuneNormala" id="sectiuneEvenimente">
+    <h2>Evenimente</h2>
+    <div class="containerGrid" id="DivEvenimente">
+      <div class="bigDivEvenimente">
+        <div class="divNormalVer container rhombus smallDivEvenimente">
+          <div class="divEye hanging">
+            <img src="img/25400 (1).png" alt="question mark" />
+          </div>
+        </div>
+        <h2 class="H2Numer">2</h2>
+        <div class="divNormalVer container divSoon smallDivEvenimente">
+          <h1>În curând...</h1>
+        </div>
+      </div>
 
-    <label for="optional">De ce ai ales ASE.TV?</label>
-    <input type="text" name="optional" id="optional">
+      <div class="bigDivEvenimente" id="DivEvenimentePrincpal">
+        <div class="divNormalVer container" id="DivGhicesteFac">
+          <h1 id="GhicesteH1">GHICEȘTE FACULTATEA</h1>
+          <h2 id="dataGhicesteFac">30.11.2026</h2>
+        </div>
+        <h1 id="HUMONGOUSH1">PRIMA EMISIUNE</h1>
+        <div class="divNormalVer container" id="DivDescriereGhicesteFac">
+          <p>
+            Prima emisiune oficială ASE.TV va inova spațiul de divertisment la care au acces studenții prin
+            reinterpretarea
+            unor idei existente care au demonstrat un grad ridicat de succes în mediul online.
+          </p>
+        </div>
+      </div>
 
-    <input type="submit" value="Send">
-    <p id="confirmareFormular"></p>
-  </form>
+      <div class="bigDivEvenimente">
+        <div class="divNormalVer container rhombus smallDivEvenimente">
+          <div class="divEye hanging">
+            <img src="img/25400 (1).png" alt="question mark" />
+          </div>
+        </div>
+        <h2 class="H2Numer">3</h2>
+        <div class="divNormalVer container divSoon smallDivEvenimente">
+          <h1>În curând...</h1>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FORM -->
+  <section class="sectiuneNormala" id="sectiuneForm">
+    <h1>Formular de Înscriere</h1>
+    <form action="/Submit" method="post" class="divNormalVer">
+      <div class="divForm">
+        <div><label for="Prenume">Prenume</label></div>
+        <input id="form1" type="text" name="prenume" required />
+
+        <div><label for="Nume">Nume</label></div>
+        <input id="form2" type="text" name="nume" required />
+
+        <div><label for="E-mail">E-mail</label></div>
+        <input id="form3" type="text" name="email" required />
+
+        <div><label for="NrTelefon">Număr de telefon</label></div>
+        <input id="form4" type="number" name="telefon" required />
+
+      </div>
+
+      <div class="divForm">
+
+        <div><label for="Facultate">Facultate</label></div>
+        <input type="text" name="facultate" id="Facultate" required />
+
+        <div><label for="AnDeStudiu" required>An de studiu</label></div>
+        <select name="anDeStudiu" id="AnDeStudiu">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+
+        <div><label for="optional">De ce ai ales ASE.TV?</label></div>
+        <input name="optional" id="Optional" type="text" />
+
+        <div>
+          <label for="Emisiune">La ce emisiune vrei să participi?</label>
+        </div>
+        <input type="text" id="emisiune" name="emisiune" />
+      </div>
+      <div id="DivSubmit">
+        <input type="submit" value="Send" id="SubmitButton" />
+        <p id="confirmareFormular"></p>
+      </div>
+    </form>
+  </section>
+
+  <!-- parteneri -->
+  <section class="sectiuneJumate" id="sectiuneParteneri">
+    <div class="divNormalWhi" id="DivParteneri">
+      <img src="img/25400 (1).png" alt="logoPartener" id="LogoPartener" />
+      <h3>Partener Oficial</h3>
+      <p>În curând...</p>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section class="container divNormalVer" id="sectiuneContact">
+    <div class="center">
+      <img src="img/images.jpeg" alt="instagram logo" class="imgContact" />
+      <a href="https://www.instagram.com/asetv.2026" target="_blank">Instagram</a>
+    </div>
+    <div class="center">
+      <img src="img/youtube-play.jpg" alt="youtube logo" class="imgContact" />
+      <a href="">Soon...</a>
+    </div>
+    <div class="center">
+      <img src="img/2023_Facebook_icon.svg.webp" alt="facebook logo" class="imgContact" />
+      <a href="https://www.facebook.com/people/ASE-TV/61596283317276/?rdid=lrPIVyIF1x0eiFfA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19orPr3m7Y%2F"
+        target="_blank">Facebook</a>
+    </div>
+    <div class="center">Numar de Telefon: +40676767676767</div>
+  </section>
+
+  <!-- footer -->
+  <footer>4teen©</footer>
   <script>
+    // const form1 = document.querySelector("form1");
+    // const form2 = document.querySelector("form2");
+    // const form3 = document.querySelector("form3");
+    // const form4 = document.querySelector("form4");
+    // const form5 = document.querySelector("form5");
+    // const form6 = document.querySelector("form6");
+    // const form7 = document.querySelector("form7");
     const formular = document.querySelector("form");
+
     const mesaj = document.getElementById("confirmareFormular");
 
     formular.addEventListener("submit", async (e) => {

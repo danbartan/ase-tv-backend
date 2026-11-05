@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscriere ASE.TV</title>
+</head>
+
+<body>
+  <form action="/submit" method="post">
+    <label for="nume">Nume</label>
+    <input type="text" name="nume" id="nume" required>
+
+    <label for="prenume">Prenume</label>
+    <input type="text" name="prenume" id="prenume" required>
+
+    <label for="telefon">Numar de telefon</label>
+    <input type="tel" name="telefon" id="telefon" pattern="0[0-9]{9}" title="10 cifre, incepe cu 0" required>
+
+    <label for="email">e-mail</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="facultate">Facultate</label>
+    <input type="text" name="facultate" id="facultate" required>
+
+    <label for="anDeStudiu">An de studiu</label>
+    <select name="anDeStudiu" id="anDeStudiu">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+
+    <label for="optional">De ce ai ales ASE.TV?</label>
+    <input type="text" name="optional" id="optional">
+
+    <input type="submit" value="Send">
+    <p id="confirmareFormular"></p>
+  </form>
+
+  <script>
+    const formular = document.querySelector("form");
+    const mesaj = document.getElementById("confirmareFormular");
+
+    formular.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const raspuns = await fetch("/Submit", {
+        method: "POST",
+        body: new URLSearchParams(new FormData(formular))
+      });
+
+      const date = await raspuns.json();
+
+      if (raspuns.ok) {
+        mesaj.textContent = "Inscrierea a fost trimisa!";
+        formular.reset();
+      } else {
+        mesaj.textContent = date.error;
+      }
+    });
+  </script>
+</body>
+
+</html>
